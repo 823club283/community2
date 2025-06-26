@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セフレ探しコミュ マチアプ オフパコ情報交換</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="community-thumbnail">
+        <img src="" alt="コミュニティサムネイル" id="thumbnail-image" class="thumbnail-image">
+    </div>
+    <header>
+        <div class="header-image"></div>
+        <nav>
+            <a href="#home">🏡 ホーム</a> | 
+            <a href="#posts">📝 投稿</a> | 
+            <a href="#gallery">🌸 ギャラリー</a> | 
+            <a href="#about">💖 About</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="notice">
+            <p>💕 セフレ探し・マチアプでみんなが実際にヤれた情報を共有しましょう！<br>
+            ※女子の個別アカウントの晒しはNGです<br>
+            ※写真を投稿する場合は必ず相手の許可を取ったもののみOK<br>
+            ※マッチングアプリの画面スクショの投稿はしないで下さい ✨</p>
+        </div>
+        <div class="post-form" id="post-form">
+            <input type="text" id="username" placeholder="🌟 ユーザー名（任意）">
+            <textarea id="post-content" placeholder="💬 今何してる？"></textarea>
+            <div id="emoji-picker" class="emoji-picker"></div>
+            <input type="file" id="post-image" accept="image/*">
+            <button onclick="submitPost()">🎀 投稿</button>
+        </div>
+        <div class="login-form" id="login-form" style="display: none;">
+            <input type="password" id="admin-password" placeholder="🔑 管理者パスワード">
+            <button onclick="login()">ログイン</button>
+        </div>
+        <div class="tabs">
+            <button class="tab-button" onclick="switchTab('latest')">⏳ 最新順</button>
+            <button class="tab-button" onclick="switchTab('popular')">⭐ おすすめ</button>
+            <button class="tab-button" onclick="switchTab('media')">📷 メディア</button>
+        </div>
+        <div id="posts" class="posts"></div>
+        <div id="gallery" class="gallery">
+            <h2>🌺 画像ギャラリー</h2>
+            <div id="gallery-images" class="gallery-images"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
